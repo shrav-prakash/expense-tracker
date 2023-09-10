@@ -7,10 +7,10 @@ export default function ExpenseFilter(props) {
     return (
         <div className='expense-filter'>
             <div className='expense-filter__control'>
-                <label>Filter by year</label>
-                <select onChange={event => props.onYearSelect(event.target.value)}>
+                <label htmlFor="year">Filter by year</label>
+                <select id="year" onChange={event => props.onYearSelect(event.target.value)}>
                     {years.map(year => (
-                        <option value={year} key={year}>{year}</option>
+                        <option name={year} value={year} key={year}>{year}</option>
                     ))}
                 </select>
             </div>

@@ -34,8 +34,7 @@ export default function App() {
   const [expenses, setExpenses] = useState(initialExpenses)
 
   const addExpense = newExpense => {
-    console.log(newExpense)
-    newExpense.id = 'e' + expenses.length
+    newExpense.id = 'e' + expenses.length + 1
     newExpense.date = new Date(newExpense.date)
     setExpenses(prevExpenses => [newExpense, ...prevExpenses])
   }
