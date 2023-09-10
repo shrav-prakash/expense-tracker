@@ -11,7 +11,7 @@ export default function ExpenseForm(props) {
         event.preventDefault();
         const expenseData = {
             title: title,
-            price: price,
+            amount: price,
             date: date
         }
         props.onFormSubmit(expenseData);
